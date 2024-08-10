@@ -1,13 +1,46 @@
+//file:JvmName("Course") Specific to Kotlin e.g. without the Kt such that it can be used within Java by the name Course
 package org.example.com.kotlinplayground.classes
 
 import com.kotlinplayground.CourseJava
+
+
+// Default value solution
+//data class Course
+//    @JvmOverloads
+//    constructor(
+//    val id : Int,
+//    val name: String,
+//    val author: String,
+//    var courseCategory: CourseCategory = CourseCategory.DEVELOPMENT
+//) {
 
 data class Course(
     val id : Int,
     val name: String,
     val author: String,
     var courseCategory: CourseCategory = CourseCategory.DEVELOPMENT
-)
+){
+    var noOfCourses = 10
+
+    @JvmField
+    var asField = 10
+
+    // Company does not directly have a concept of static function but it has companion object
+    companion object {
+
+        fun printName2(name: String = "default") {
+            println("name: $name")
+        }
+
+        @JvmStatic
+        fun printNameAsStatic(name: String = "default") {
+            println("name: $name")
+        }
+
+    }
+}
+
+
 
 
 enum class CourseCategory {
@@ -17,6 +50,7 @@ enum class CourseCategory {
     MARKETING
 }
 
+//@JvmName("printName2")
 // Instructs the Kotlin compiler to generate overloads for this function that substitute default parameter values.
 @JvmOverloads
 fun printName(name: String = "default") {
