@@ -76,5 +76,6 @@ fun main() {
     println("courseJava = $courseJava")
     courseJava.id = 4
     courseJava.name = "xxxx"
+//    courseJava.keyListList
     println("courseJava = $courseJava")
 }

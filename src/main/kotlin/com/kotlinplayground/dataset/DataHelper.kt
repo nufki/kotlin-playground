@@ -10,6 +10,7 @@ const val JAVA = "java"
 const val REACTIVE_PROGRAMMING = "Reactive Programming"
 const val MULTI_THREADING = "MultiThreading"
 const val INTEGRATION_TESTING = "Integraion Testing"
+const val TEST = "test - ONE MORE"
 
 data class Course(
     val id: Int,

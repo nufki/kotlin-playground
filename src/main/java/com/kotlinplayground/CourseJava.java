@@ -1,15 +1,23 @@
 package com.kotlinplayground;
 
+import java.util.List;
+
 public class CourseJava {
     private Integer id;
     private String name;
     private String author;
+    private List<String> keyList_;
 
 
     public CourseJava(Integer id, String name, String author) {
         this.id = id;
         this.name = name;
         this.author = author;
+        this.keyList_ = java.util.Collections.emptyList();
+    }
+
+    public List<String> getKeyListList() {
+        return keyList_;
     }
 
     public Integer getId() {
